@@ -1,14 +1,19 @@
 
-# Algoritmos
+# Entendendo Algoritmos - Estudos em JavaScript e Python
 
-## Descrição
-Este projeto, chamado **Algoritmos**, foi desenvolvido como parte do meu portfólio para demonstrar habilidades em Python.
+Este repositório é dedicado aos meus estudos do livro **"Entendendo Algoritmos"** de Aditya Bhargava. O objetivo é implementar e praticar os algoritmos abordados no livro utilizando as linguagens **JavaScript** e **Python**.
 
-## Tecnologias utilizadas
-- Python
+## 📘 Sobre o Livro
 
-## Objetivo
-Implementar algoritmos clássicos como busca binária e outros.
+_"Entendendo Algoritmos"_ é uma introdução visual e acessível aos algoritmos, cobrindo conceitos como:
+
+- Busca binária
+- Ordenação por seleção
+- Recursão
+- Tabelas de hash
+- Algoritmos de busca em grafos
+- Programação dinâmica
+- E outros...
 
 ## Como executar
 ```bash

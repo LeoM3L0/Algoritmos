@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Busca Binária</title>
+</head>
+<body>
+  <h2>Busca Binaria</h2>
+  
+  <section>
+    <p>Insira umas lista de números ordenados (separados por vírgula):</p>
+    <input type="text" id="listaNumeros" placeholder="EX: 1,2,3,4">
+    
+    <p>Insira o Elemento Que deseja procurar:</p>
+    <input type="number" id="elementoBusca" placeholder="EX: 3">
+
+    <br><br>
+    <button onclick="executarBusca()">Buscar</button>
+
+    <p id="resultado"></p>
+    <p id="Lista_Array"></p>
+  </section>
+
+  <script>
+    function buscaBinaria(array, alvo) {
+      let inicio = 0;
+      let fim = array.length - 1;
+
+      while (inicio <= fim) {
+        let meio = Math.floor((inicio + fim) / 2);
+
+        if (array[meio] === alvo) {
+          return meio;
+        } else if (array[meio] < alvo) {
+          inicio = meio + 1;
+        } else {
+          fim = meio - 1;
+        }
+      }
+
+      return -1;
+    }
+
+  function executarBusca(){
+    // Pega Valores dos Inputs
+    const listainput = document.getElementById("listaNumeros").value;
+    const elementoinput = parseInt(document.getElementById("elementoBusca").value);
+
+    // Converte a string em um array de números
+    const lista = listainput.split(',').map(Number);
+
+    // Garantindo que a lista esteja ordenada
+    lista.sort((a, b) => a - b);
+
+    // Executa Busca Binaria
+    const indice = buscaBinaria(lista, elementoinput);
+
+    // Mostra o Resultado
+    const resultado = document.getElementById("resultado");
+    if (indice !== -1){
+      resultado.textContent = `Elemento encontrado no índice: ${indice}`;
+    }
+    else {
+      resultado.textContent = 'Elemento não encontrado.';
+    }
+
+    Lista_Array.textContent = `Array: ${lista}`
+    console.log("Array", lista);
+    console.log("Resultado da Busca", indice);
+  }
+
+  </script>
+</body>
+</html>
